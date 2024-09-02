@@ -17,7 +17,8 @@ public class Producto {
         this.precio = precio;
         this.CantidadInventario = CantidadInventario;
     }
-
+    
+    //Métodos getter y setter
     public int getID() {
         return ID;
     }

@@ -3,12 +3,12 @@ package Logica;
 
 import javax.swing.JOptionPane;
 
-public class Noperecedero extends Producto{
+public class NoPerecedero extends Producto{
     //campos 
     private int GarantiaMes;
     
     //constructor
-    public Noperecedero(int ID, String nombre, double precio, int CantidadInventario, int GarantiaMes) {
+    public NoPerecedero(int ID, String nombre, double precio, int CantidadInventario, int GarantiaMes) {
         super(ID, nombre, precio, CantidadInventario);
         this.GarantiaMes = GarantiaMes;
     }
