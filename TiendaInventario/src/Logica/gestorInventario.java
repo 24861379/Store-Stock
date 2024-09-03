@@ -18,28 +18,19 @@ public class gestorInventario {
         producto.add(Stock);
     }
     
-    public void ModificarProducto(String nombre){
-        double precio;
-        int inventario;
-        
+    public void ModificarProducto(int id){
         for (Producto update : producto) {
-            if (update.getNombre().equalsIgnoreCase(nombre)) {
-                System.out.println("¿Desea actualizar el precio?");
-                String opcion= p1.next();
-                if (!opcion.equalsIgnoreCase("si") || !opcion.equalsIgnoreCase("no")) {
-                    System.out.println("Ingrese si o no");
-                }else{
-                    if ("si".equalsIgnoreCase(opcion)) {
-                        System.out.println("Actualizar el precio.");
-                        precio = p1.nextDouble();
-                        update.setPrecio(precio);
-                    }else{
-                        System.out.println("Actualizar inventario.");
-                        inventario = p1.nextInt();
-                        update.setCantidadInventario(inventario);
-                    } 
-                }
-                
+            System.out.println("¿que desa actualizar? ¿precio o inventario?");
+            String op=p1.next();
+            
+            if ("precio".equalsIgnoreCase(op)) {
+                System.out.println("Ingrese el precio");
+                double precio = p1.nextDouble();
+                update.setPrecio(precio);
+            }else if("inventario".equalsIgnoreCase(op)){
+                System.out.println("Actualizar el inventario");
+                int inventario = p1.nextInt();
+                update.setCantidadInventario(inventario);
             }
         }
     }
@@ -54,28 +45,33 @@ public class gestorInventario {
         producto.removeAll(ProductoAEliminar);
         
         if (ProductoAEliminar.isEmpty()) {
-            System.out.println("Producto eliminado");
+            System.out.println("no hay producto para eliminar");
         }else{
-            System.out.println("No se elimino el producto");
+            System.out.println("producto eliminado");
         }
     }
     
     public void BuscarProducto(String nombre){
+        boolean encontrado = false;
         for (Producto buscar : producto) {
             if (buscar.getNombre().equalsIgnoreCase(nombre)) {
                 System.out.println("Id del producto:" +buscar.getID()+"\n"+
-                                    "nombre del producto: "+buscar.getNombre()+"\n"+
-                                            "cantidad del producto: "+buscar.getCantidadInventario());
-            }else{
-                System.out.println("no se encotro el nombre del producto.");
+                                   "nombre del producto: "+buscar.getNombre()+"\n"+
+                                   "precio del producto: " + buscar.getPrecio()+"\n"+
+                                   "cantidad del producto: "+buscar.getCantidadInventario());
+                encontrado= true;
+                break;
             }
+        }
+        if (!encontrado) {
+            System.out.println("No se encontro el producto.");
         }
     }
     
-    public void GenerarInforme(){
+    public void Informacion(){
         System.out.println("Informe de los productos");
-        for (Producto Informe : producto) {
-            Informe.Informacion();
+        for (Producto Info : producto) {
+            Info.Informacion();
         }
     }
     

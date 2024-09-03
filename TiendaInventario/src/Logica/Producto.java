@@ -1,7 +1,7 @@
 
 package Logica;
 
-import javax.swing.JOptionPane;
+
 
 public class Producto {
     //campos
@@ -52,11 +52,12 @@ public class Producto {
     }
     
     public void Informacion(){
-        JOptionPane.showMessageDialog(null, 
-                "Id del producto" + ID+"\n"+
-                "Producto "+ nombre+"\n"+ 
-                "Precio "+ precio+"\n"+
-                "Stock "+ CantidadInventario);
+        System.out.println("----------------------------");
+        System.out.println("Id del producto: " + ID + "\n"+
+                           "Producto: "+ nombre+"\n"+
+                           "Precio: "+ precio+"\n"+
+                           "Stock: "+ CantidadInventario);
+        System.out.println("-----------------------------");
     }
     
 }

@@ -1,8 +1,6 @@
 
 package Logica;
 
-import javax.swing.JOptionPane;
-
 
 public class Perecedero extends Producto{
     //campos adicionales
@@ -35,8 +33,11 @@ public class Perecedero extends Producto{
     
     @Override
     public void Informacion(){
-        JOptionPane.showMessageDialog(null, "Fecha de caducidad"+ fechaCaducidad+ "\n"+
-                                                        "Temperatura "+ temperaturaDeAlmacenamiento);
+        System.out.println("----------------------------");
+        super.Informacion();
+        System.out.println("Fecha de caducidad: "+ fechaCaducidad+ "\n"+
+                           "Temperatura: "+ temperaturaDeAlmacenamiento);
+        System.out.println("------------------------------------");
     }
     
     

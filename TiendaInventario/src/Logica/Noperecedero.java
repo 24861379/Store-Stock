@@ -1,7 +1,6 @@
 
 package Logica;
 
-import javax.swing.JOptionPane;
 
 public class NoPerecedero extends Producto{
     //campos 
@@ -25,6 +24,9 @@ public class NoPerecedero extends Producto{
     
     @Override
     public void  Informacion(){
-        JOptionPane.showMessageDialog(null, "Garatia " + GarantiaMes + " mes");
+        System.out.println("----------------------------");
+        super.Informacion();
+        System.out.println("Garatia: " + GarantiaMes + " mes");
+        System.out.println("-----------------------------------");
     }
 }
