@@ -9,20 +9,22 @@ public class gestorInventario {
     Scanner p1 = new Scanner(System.in);
     private ArrayList<Producto> producto;
     
-    //constructor
+    //en el constructor inicializo el objeto y dentro de este inicializo el ArryList
     public gestorInventario() {
         producto = new ArrayList<>();
     }
     
+    //en este método agregamos toda los datos de la clase pabre(Producto) y de Perecedero y NoPerecedero
     public void AgregarProducto(Producto Stock){
         producto.add(Stock);
     }
     
+    //En este método usamos un parametro llamado id para preguntarle al usuario que dato desa cambiar
+    //si el precio o el inventario
     public void ModificarProducto(int id){
-        for (Producto update : producto) {
-            System.out.println("¿que desa actualizar? ¿precio o inventario?");
+        System.out.println("¿que desa actualizar? ¿precio o inventario?");
             String op=p1.next();
-            
+        for (Producto update : producto) {
             if ("precio".equalsIgnoreCase(op)) {
                 System.out.println("Ingrese el precio");
                 double precio = p1.nextDouble();
@@ -35,6 +37,8 @@ public class gestorInventario {
         }
     }
     
+    //en este método le pedimos el nombre del producto que quiere eliminar, para eso uso un ArrayList secundario
+    //para que guarde todos los productos para uue los elimine esto se logra con .removeAll()
     public void EliminarProducto(String nombre){
         ArrayList<Producto> ProductoAEliminar = new ArrayList<>();
         for (Producto borrar : producto) {
@@ -51,6 +55,9 @@ public class gestorInventario {
         }
     }
     
+    //en este método pedimos un parametro nombre con este podemos encontrar el producto y ver todo sus datos
+    //con el dato booleano lo que hacer es marcar si si se encotro el producto o no si no se encontro
+    //muestra que no se encotro el producto
     public void BuscarProducto(String nombre){
         boolean encontrado = false;
         for (Producto buscar : producto) {
@@ -68,6 +75,8 @@ public class gestorInventario {
         }
     }
     
+    //este método tiene un for each que itera con la variable de la lista producto y con la variable info podemos 
+    //traer el método Informacion de la clase padre
     public void Informacion(){
         System.out.println("Informe de los productos");
         for (Producto Info : producto) {

@@ -3,10 +3,11 @@ package Logica;
 
 
 public class Perecedero extends Producto{
-    //campos adicionales
+    //se crean la varibles, estas se encapsulan con la palabra clave private
     private String fechaCaducidad;
     private int temperaturaDeAlmacenamiento;
 
+    //creamos el contructor en el que inicializamos el objeto y asignamos los valores
     public Perecedero(int ID, String nombre, double precio, int CantidadInventario, String fechaCaducidad, int temperaturaDeAlmacenamiento) {
         super(ID, nombre, precio, CantidadInventario);
         this.fechaCaducidad = fechaCaducidad;
@@ -14,7 +15,8 @@ public class Perecedero extends Producto{
     }
     
     //Métodos getter y setter
-
+    //con get podemos obtener el valor de cada variable
+    //y con set acutualizamos el valor antes definido
     public String getFechaCaducidad() {
         return fechaCaducidad;
     }
@@ -31,6 +33,8 @@ public class Perecedero extends Producto{
         this.temperaturaDeAlmacenamiento = temperaturaDeAlmacenamiento;
     }
     
+    //este metodo lo usamos para sobre escribir el mensaje de la clase padre, esot se hace con la palabra 
+    //reservada @Override
     @Override
     public void Informacion(){
         System.out.println("----------------------------");

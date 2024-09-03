@@ -4,13 +4,14 @@ package Logica;
 
 
 public class Producto {
-    //campos
+    //se crean la varibles, estas se encapsulan con la palabra clave private
     private int ID;
     private String nombre;
     private double precio;
     private int CantidadInventario;
     
     //constructor
+    //creamos el contructor en el que inicializamos el objeto y asignamos los valores
     public Producto(int ID, String nombre, double precio, int CantidadInventario) {
         this.ID = ID;
         this.nombre = nombre;
@@ -19,6 +20,8 @@ public class Producto {
     }
     
     //Métodos getter y setter
+    //con get podemos obtener el valor de cada variable
+    //y con set acutualizamos el valor antes definido
     public int getID() {
         return ID;
     }
@@ -51,6 +54,7 @@ public class Producto {
         this.CantidadInventario = CantidadInventario;
     }
     
+    //este metodo lo usamos para mostrar los mensejes
     public void Informacion(){
         System.out.println("----------------------------");
         System.out.println("Id del producto: " + ID + "\n"+
