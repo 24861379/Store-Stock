@@ -51,7 +51,7 @@ public class Tienda {
                     //pedimos los valores para la clase NoPerecedero que hereda todas las variables de Producto
                     //y le asignamos sus valores, tambien se le asigna la variable del la clase NoPerecedero
                     System.out.println("****Agregar productos no perecederos****");
-                    System.out.println("Ingrese el id del no producto");
+                    System.out.println("Ingrese el id del producto no perecedero");
                     int IdNoProducto = p2.nextInt();
                     System.out.println("Ingrese el nombre del producto no perecedero");
                     String nombreNoProducto = p2.next();
