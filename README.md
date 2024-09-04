@@ -8,7 +8,7 @@ Con el uso de un ArrayList al que se le pasa la clase padre (Producto), se crear
 - **Eliminar producto**: Este método tiene un parámetro que es el nombre, el cual se compara con el nombre del producto. Si son iguales, se asigna a un ArrayList secundario para luego eliminar el producto y sus demás valores.
 - **Buscar producto**: Este método tiene un parámetro que es el nombre, el cual se compara con el nombre del producto. Si son iguales, se muestra toda la información del producto, como el ID, el nombre, el precio y la cantidad.
 - **Informacion**: Con este método usamos un for-each con el que podemos obtener el método de información de cada producto.
-- 
+
 # Cómo funciona
 Al ejecutar el programa en la consola, aparecerá un menú de 7 opciones en el que el usuario puede agregar productos perecederos y no perecederos, modificar productos, eliminar productos, buscar productos, generar productos y salir del programa.
 
